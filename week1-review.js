@@ -1,9 +1,15 @@
-let firstName = "Gerald";
-let lastName = "Booker";
+const firstName = "Gerald";
+const lastName = "Booker";
 const legalName = `${firstName} ${lastName}`;
-console.log(`Hello everyone, my name is ${legalName}`);
+let age = 28;
 
-// var is not used in new code due to bugs that occur as JS initializes the variable before any code in the function is executed.
+function greeting(name, age) {
+   return `Hello everyone, my name is ${legalName} and I am ${age} years old.`;
+}
+
+console.log(greeting(legalName, age));
+
+// var is not used in new code due to bugs that occur as JS hoists the variable to the top of the function.
 var number = 3;
 
 // this returns false because JS uses floating point arithmetic, so the value of 0.1 + 0.2 is actually 0.30000000000000004
