@@ -34,3 +34,33 @@ const greetingsV3 = (name) => console.log(`Hello, ${name}!`);
 
 greetingsV2("Benny");
 greetingsV3("Benny");
+
+let minIncomeForCondo = 70000;
+let minIncomeForCar = 50000;
+
+// Testing ternary conditional statements
+const getMessage = (income) => {
+   const message =
+      income >= minIncomeForCondo && income > minIncomeForCar
+         ? "You can afford a condo and a car"
+         : income >= minIncomeForCar && income < minIncomeForCondo
+           ? "You can afford a car, but not a condo"
+           : "You can't afford neither a car nor condo";
+   console.log(message);
+};
+
+getMessage(80000);
+getMessage(50000);
+getMessage(40000);
+
+const confirmEnding = (str1, str2) => {
+   const str2Length = str2.length;
+   const str1End = str1.slice(str1.length - str2Length);
+   if (str1End.toLowerCase() === str2.toLowerCase()) {
+      return true;
+   }
+   return false;
+};
+
+console.log(confirmEnding("blender", "Ender"));
+console.log(confirmEnding("butter rolls", "lols"));
