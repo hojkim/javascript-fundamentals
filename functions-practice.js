@@ -53,6 +53,7 @@ getMessage(80000);
 getMessage(50000);
 getMessage(40000);
 
+// This function takes 2 strings and checks if the second string matches the ending of the first string
 const confirmEnding = (str1, str2) => {
    const str2Length = str2.length;
    const str1End = str1.slice(str1.length - str2Length);
