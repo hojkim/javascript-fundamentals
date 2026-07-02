@@ -13,4 +13,25 @@ console.log(fruits);
 
 const firstFruit = fruits.shift();
 console.log(firstFruit);
+// outputs ['guava', 'blueberry', 'apple', 'orange', 'banana', 'melon', 'lychee']
 console.log(fruits);
+
+// array destructuring
+// discoveries: rest element must be the last element
+let [first, , third, ...remainder] = fruits;
+console.log(first);
+console.log(third);
+console.log(remainder);
+
+// reversing a string
+let name = "hojun";
+let charName = name.split("");
+console.log(charName);
+charName.reverse();
+console.log(charName);
+let reversedName = charName.join("");
+console.log(reversedName);
+
+// reversing a string in one line of code
+let reversedName2 = name.split("").reverse().join("");
+console.log(reversedName2);
