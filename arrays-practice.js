@@ -45,7 +45,7 @@ console.log(bananaIndex);
 console.log(raspberryIndex);
 
 // shallow copies using concat(), slice(), and spread operator
-// discoveries: shallow copies are not exact copies of the original array, equality check returns false
+// discoveries: shallow copies are not exact copies of the original array, if original array has arrays or objects, the references will be copied
 const copyFruits1 = [].concat(fruits);
 const copyFruits2 = fruits.slice();
 const copyFruits3 = [...fruits];
