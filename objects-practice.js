@@ -42,3 +42,23 @@ console.log(person.name !== undefined);
 console.log(person.hairColor !== undefined);
 console.log(person.greeting());
 console.log(person.workPhone());
+
+const fruit = {
+   name: "Alphonso Mango",
+   isYummy: true,
+   isSmall: false,
+   country: "India",
+};
+
+// JSON.stringify() practice, takes in 3 parameters: object, replacer, and spacer. the latter 2 are not commonly used
+const stringifiedFruit = JSON.stringify(fruit);
+console.log(stringifiedFruit);
+console.log(typeof stringifiedFruit);
+console.log(JSON.stringify(fruit, ["name", "country"]));
+console.log(JSON.stringify(fruit, null, 4));
+
+// JSON.parse() practice
+const fruitObj = JSON.parse(stringifiedFruit);
+console.log(fruitObj);
+console.log(typeof fruitObj);
+console.log(JSON.parse("{}"));
