@@ -62,3 +62,33 @@ const fruitObj = JSON.parse(stringifiedFruit);
 console.log(fruitObj);
 console.log(typeof fruitObj);
 console.log(JSON.parse("{}"));
+
+// Object destructuring
+const { name: fruitName, country: originCountry, color = "Yellow" } = fruit;
+console.log(`Name: ${fruitName}\nCountry: ${originCountry}\nColor: ${color}`);
+
+const {
+   contact: { email: personalEmail },
+} = person;
+console.log(personalEmail);
+
+const {
+   contact: {
+      phone: { home: homePhoneNumber },
+   },
+} = person;
+console.log(homePhoneNumber);
+
+// Nested object destructuring, accessing object properties that are nested in an array inside an object
+const {
+   addresses: [{ city: cityName, type }, { city: cityName2 }],
+} = person;
+console.log(`My ${type} address is in ${cityName}.`);
+console.log(`My personal address is in ${cityName2}.`);
+
+// Shorthand notation
+let bugName = "June";
+let bugAge = "2 weeks";
+
+let bug = { bugName, bugAge };
+console.log(bug);
