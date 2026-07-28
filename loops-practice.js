@@ -61,3 +61,32 @@ for (const prop in person) {
       console.log(person[prop]);
    }
 }
+
+let counter = 0;
+while (counter < 5) {
+   counter++;
+   console.log(counter);
+}
+
+// do...while loops always execute the first instance and then checks if the condition is true
+let counter2 = 0;
+do {
+   console.log(counter2);
+   counter2++;
+} while (counter2 < 5);
+
+// break statements exit a loop early
+for (let i = 0; i < 3; i++) {
+   if (i === 1) {
+      break;
+   }
+   console.log(`Current number: ${i}`);
+}
+
+// continue skips the current iteration and moves onto the next one
+for (let i = 0; i < 5; i++) {
+   if (i === 3) {
+      continue;
+   }
+   console.log(`Number in loop: ${i}`);
+}
