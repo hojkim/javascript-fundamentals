@@ -48,3 +48,20 @@ console.log(
       return str.length > 10;
    }),
 );
+
+// This function takes in a string and returns the same string with each word's first letter capitalized
+const titleCase = (str) => {
+   if (str.length === 0 || typeof str !== "string") {
+      return undefined;
+   }
+
+   const words = str.trim().split(" ");
+   const capitalizedWords = words.map(
+      (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(),
+   );
+   console.log(capitalizedWords);
+   return capitalizedWords.join(" ").trim();
+};
+
+console.log(titleCase("I'm a little cake pop"));
+console.log(titleCase("piNK AnD SwEEt"));
