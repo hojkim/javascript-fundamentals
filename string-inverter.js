@@ -9,7 +9,7 @@ const reverseString = (string) => {
 };
 
 // Using reverse() method on character array
-const reverseString = (string) => {
+const reverseString2 = (string) => {
    const chars = [...string];
    chars.reverse();
    return chars.join("");
