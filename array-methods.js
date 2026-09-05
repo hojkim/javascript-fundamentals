@@ -21,3 +21,19 @@ const doubleEvens = numbers.filter(
    (num, index) => num % 2 === 0 && index % 2 === 0,
 );
 console.log(doubleEvens);
+
+// forEach() iterates through an array and can take a callback function that applies to each element
+numbers.forEach((num) => {
+   console.log(num * 2);
+});
+
+const groceryList = ["milk", "eggs", "cheese"];
+const copiedList = [];
+groceryList.forEach((item) => {
+   copiedList.push(item);
+});
+
+console.log(copiedList);
+// .push method returns the length of the array after adding item to it
+console.log(copiedList.push("crackers"));
+console.log(copiedList);
